@@ -1,0 +1,2 @@
+# External dependency for colored console output (Optional)
+colorama>=0.4.4
