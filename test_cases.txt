@@ -1,0 +1,95 @@
+TC-1: Baseline Demo
+Medications (10 total)
+Metformin
+Doses: 2/day
+Interval: 8h
+Food Relation: with_meal
+Lisinopril
+Doses: 1/day
+Interval: 24h
+Food Relation: any
+Atorvastatin
+Doses: 1/day
+Interval: 24h
+Food Relation: any
+Aspirin
+Doses: 1/day
+Interval: 24h
+Food Relation: with_meal
+Omeprazole
+Doses: 1/day
+Interval: 24h
+Food Relation: empty_stomach
+Amlodipine
+Doses: 1/day
+Interval: 24h
+Food Relation: any
+Metoprolol
+Doses: 2/day
+Interval: 8h
+Food Relation: with_meal
+Gabapentin
+Doses: 3/day
+Interval: 6h
+Food Relation: any
+Vitamin D
+Doses: 1/day
+Interval: 24h
+Food Relation: with_meal
+Potassium Chloride
+Doses: 2/day
+Interval: 6h
+Food Relation: with_meal
+Interactions (4 pairs)
+Metformin ↔ Omeprazole → Minimum separation: 1 hour
+Lisinopril ↔ Atorvastatin → Minimum separation: 1 hour
+Aspirin ↔ Metoprolol → Minimum separation: 1 hour
+Lisinopril ↔ Amlodipine → Minimum separation: 2 hours
+
+
+TC-2: Single Medication
+Medication: Gabapentin
+Doses/Day: 3
+Interval: 6 hours (12 slots)
+Food Relation: any
+Interactions: None
+
+
+TC-3: Strict with_meal
+Medications: Same 10 as TC-1
+Modification: All medications set to with_meal
+Interactions: Same 4 pairs as TC-1
+
+
+TC-4: Infeasible Constraints
+Medication: InfeasibleDrug
+Doses/Day: 4
+Interval: 12 hours (24 slots)
+Food Relation: with_meal
+Interactions: None
+Constraint Conflict
+
+Requires 36 hours total
+
+(3×12h gaps)+doses
+Exceeds 24-hour system limit → infeasible
+
+
+TC-5: empty_stomach Constraint
+Medication: Omeprazole
+Doses/Day: 1
+Interval: 24 hours (48 slots)
+Food Relation: empty_stomach
+Restricted Slots
+Must avoid: 14–17, 24–27, 36–39
+Interactions: None
+
+
+TC-6: Interaction Separation
+Medications
+Metformin → 1 dose/day, any
+Omeprazole → 1 dose/day, any
+Interaction
+Metformin ↔ Omeprazole
+Minimum Separation
+1 hour (2 slots)

@@ -1,0 +1,15 @@
+SMART MEDICATION SCHEDULE — AI2002 Assignment 1
+============================================================
+
+Time      Medications                               Notes
+------------------------------------------------------------
+06:30     Lisinopril, Omeprazole, Gabapentin        Empty Stomach
+07:00     Aspirin, Vitamin D, Potassium Chloride    With Meal; With Meal; With Meal
+07:30     Metformin, Atorvastatin                   With Meal
+08:00     Metoprolol                                With Meal
+08:30     Amlodipine                                
+14:30     Gabapentin                                
+18:00     Metoprolol                                With Meal
+18:30     Metformin                                 With Meal
+19:30     Potassium Chloride                        With Meal
+20:30     Gabapentin                                
