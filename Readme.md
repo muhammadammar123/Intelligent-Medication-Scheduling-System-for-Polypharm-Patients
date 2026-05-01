@@ -1,4 +1,4 @@
-# Smart Medication Scheduler — AI2002 Assignment 1, Part B
+# Intelligent Medication Scheduler 
 
 ## Problem
 Polypharmacy patients (10+ medications) need daily schedules satisfying:
